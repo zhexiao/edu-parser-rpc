@@ -22,14 +22,14 @@ func TestWordPaper(t *testing.T) {
 		micro.Registry(reg),
 	)
 
-	bytes, err := ioutil.ReadFile("./testdoc.docx")
+	fileBytes, err := ioutil.ReadFile("./testdoc.docx")
 	if err != nil {
 		fmt.Println(err)
 	}
 
 	client := pb.NewWordPaperService("paper.wordPaper.srv", service.Client())
 	resp, err := client.Parser(context.TODO(), &pb1.Request{
-		Body: bytes,
+		Body: fileBytes,
 	})
 
 	if err != nil {
