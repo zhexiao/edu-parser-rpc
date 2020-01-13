@@ -8,6 +8,7 @@ import (
 	"github.com/micro/go-plugins/registry/etcdv3"
 	pb1 "github.com/zhexiao/edu-parser-proto/common"
 	pb "github.com/zhexiao/edu-parser-proto/paper"
+	"io/ioutil"
 	"testing"
 )
 
@@ -21,9 +22,14 @@ func TestWordPaper(t *testing.T) {
 		micro.Registry(reg),
 	)
 
+	bytes, err := ioutil.ReadFile("./testdoc.docx")
+	if err != nil {
+		fmt.Println(err)
+	}
+
 	client := pb.NewWordPaperService("paper.wordPaper.srv", service.Client())
 	resp, err := client.Parser(context.TODO(), &pb1.Request{
-		Body: []byte("肖哲"),
+		Body: bytes,
 	})
 
 	if err != nil {
@@ -31,5 +37,4 @@ func TestWordPaper(t *testing.T) {
 	}
 
 	fmt.Println(resp.Data)
-
 }
