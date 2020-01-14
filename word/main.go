@@ -2,8 +2,6 @@ package main
 
 import (
 	"github.com/micro/go-micro"
-	"github.com/micro/go-micro/registry"
-	"github.com/micro/go-plugins/registry/etcdv3"
 	"github.com/zhexiao/edu-parser-rpc/base"
 	"github.com/zhexiao/edu-parser-rpc/proto/wordpb"
 	"github.com/zhexiao/edu-parser-rpc/word/srv"
@@ -39,16 +37,17 @@ func init() {
 }
 
 func main() {
-	reg := etcdv3.NewRegistry(func(options *registry.Options) {
-		options.Addrs = []string{"http://0.0.0.0:2379"}
-		options.Secure = false
-	})
+	//注册etcd
+	//reg := etcdv3.NewRegistry(func(options *registry.Options) {
+	//	options.Addrs = []string{"http://0.0.0.0:2379"}
+	//	options.Secure = false
+	//})
 
 	service := micro.NewService(
 		micro.Name("word.srv"),
 		micro.RegisterTTL(time.Second*30),
 		micro.RegisterInterval(time.Second*10),
-		micro.Registry(reg),
+		//micro.Registry(reg),
 	)
 
 	_ = wordpb.RegisterWordSrvHandler(service.Server(), new(srv.CT_Word))
