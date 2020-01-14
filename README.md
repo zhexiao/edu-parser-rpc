@@ -1,6 +1,11 @@
 # edu-parser-rpc
 基于GRPC与go-micro的教育资源解析RPC服务。
 
+## 基本需求
+1. golang >= 1.13
+2. protoc >= 3.11.2
+3. go-micro >= 1.18
+
 ## protobuf 编译
 ```shell script
 $ cd proto
