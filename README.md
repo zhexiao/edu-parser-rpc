@@ -19,8 +19,15 @@ $ protoc --micro_out=paths=source_relative:. --go_out=paths=source_relative:. ./
 $ protoc --micro_out=paths=source_relative:. --go_out=paths=source_relative:. ./excelpb/*.proto
 ```
 
-# WORD RPC服务
+# Word RPC服务
 ```shell script
 $ cd word
 $ cp settings.yaml.example settings.yaml
+
+$ go run main.go
+```
+
+# Excel RPC服务
+```shell script
+$ go run main.go
 ```
