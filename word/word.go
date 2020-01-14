@@ -5,7 +5,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/zhexiao/edu-parser-proto/basepb"
+	"github.com/zhexiao/edu-parser-rpc/proto/basepb"
 	"github.com/zhexiao/office-parser/word"
 )
 

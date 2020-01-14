@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+//proto的package
+package wordpb;
+
+//go生成代码的package
+option go_package = "github.com/zhexiao/edu-parser-rpc/proto/wordpb";
+
+import "basepb/base.proto";
+
+service WordSrv {
+    rpc ParserPaper (basepb.Request) returns (basepb.Response) {
+
+    }
+
+    rpc ParserQuestion (basepb.Request) returns (basepb.Response) {
+
+    }
+}

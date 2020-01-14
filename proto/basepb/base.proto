@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+//proto的package
+package basepb;
+
+//go生成代码的package
+option go_package = "github.com/zhexiao/edu-parser-rpc/proto/basepb";
+
+
+message Request {
+    bytes body = 1;
+}
+
+message Response {
+    string data = 1;
+}

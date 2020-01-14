@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+//proto的package
+package excelpb;
+
+//go生成代码的package
+option go_package = "github.com/zhexiao/edu-parser-rpc/proto/excelpb";
+
+import "basepb/base.proto";
+
+service ExcelSrv {
+    rpc ParserPaper (basepb.Request) returns (basepb.Response) {
+
+    }
+
+    rpc ParserOutline (basepb.Request) returns (basepb.Response) {
+
+    }
+
+    rpc ParserBook (basepb.Request) returns (basepb.Response) {
+
+    }
+
+    rpc ParserCognitionSp (basepb.Request) returns (basepb.Response) {
+
+    }
+
+    rpc ParserCognitionMap (basepb.Request) returns (basepb.Response) {
+
+    }
+}
