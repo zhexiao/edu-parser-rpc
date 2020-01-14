@@ -609,8 +609,8 @@ github.com/xeipuuv/gojsonschema v1.1.0/go.mod h1:5yf86TLmAcydyeJq5YvxkGPE2fm/u4m
 github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2 h1:eY9dn8+vbi4tKz5Qo6v2eYzo7kUS51QINcR5jNpbZS8=
 github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2/go.mod h1:UETIi67q53MR2AWcXfiuqkDkRtnGDLqkBTpCHuJHxtU=
 github.com/xlab/treeprint v0.0.0-20181112141820-a009c3971eca/go.mod h1:ce1O1j6UtZfjr22oyGxGLbauSBp2YVXpARAosm7dHBg=
-github.com/zhexiao/edu-parser-proto v0.0.0-20200113084806-e0914ba6db12 h1:HLZWGX9gCyKOATNIkVLC5+Waymx1IBbLTMwY8t19a5s=
-github.com/zhexiao/edu-parser-proto v0.0.0-20200113084806-e0914ba6db12/go.mod h1:L7I3C2NP11TiAPkXhEUF8txFc76pDH3c9xbdBV8+Eas=
+github.com/zhexiao/edu-parser-proto v0.0.0-20200114014735-465098bb80f5 h1:HdueiRADkIO6vjUxCYwYYAafI7ebh5YLb2hGJGFBWIE=
+github.com/zhexiao/edu-parser-proto v0.0.0-20200114014735-465098bb80f5/go.mod h1:L7I3C2NP11TiAPkXhEUF8txFc76pDH3c9xbdBV8+Eas=
 github.com/zhexiao/mtef-go v0.0.0-20191108035807-f2831343854e h1:ZH7LnUAuSm3bmZo0NHRS37cr2QvPrJ/NCof61RphhEY=
 github.com/zhexiao/mtef-go v0.0.0-20191108035807-f2831343854e/go.mod h1:UHbyDpWVAUo5igKsBgW5mJ9W9HPVQXBaNfIZO5DxIvk=
 github.com/zhexiao/office-parser v0.0.0-20200108032319-d4feef4b0b69 h1:20IWB+Luwh6+KWkAK9dLTDnVjd/v+Z5EnRWcSQyE5WI=

@@ -5,8 +5,8 @@ import (
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/registry"
 	"github.com/micro/go-plugins/registry/etcdv3"
-	pb "github.com/zhexiao/edu-parser-proto/paper"
-	"github.com/zhexiao/edu-parser-rpc/paper"
+	"github.com/zhexiao/edu-parser-proto/wordpb"
+	"github.com/zhexiao/edu-parser-rpc/word"
 	"time"
 )
 
@@ -17,13 +17,13 @@ func main() {
 	})
 
 	service := micro.NewService(
-		micro.Name("paper.wordPaper.srv"),
+		micro.Name("word.srv"),
 		micro.RegisterTTL(time.Second*30),
 		micro.RegisterInterval(time.Second*10),
 		micro.Registry(reg),
 	)
 
-	_ = pb.RegisterWordPaperHandler(service.Server(), new(paper.CT_WordPaper))
+	_ = wordpb.RegisterWordSrvHandler(service.Server(), new(word.CT_Word))
 
 	if err := service.Run(); err != nil {
 		fmt.Println(err)
