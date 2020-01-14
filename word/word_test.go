@@ -2,13 +2,13 @@ package word
 
 import (
 	"context"
-	"fmt"
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/registry"
 	"github.com/micro/go-plugins/registry/etcdv3"
 	"github.com/zhexiao/edu-parser-proto/basepb"
 	"github.com/zhexiao/edu-parser-proto/wordpb"
 	"io/ioutil"
+	"log"
 	"testing"
 )
 
@@ -24,7 +24,7 @@ func TestWordPaper(t *testing.T) {
 
 	fileBytes, err := ioutil.ReadFile("../_testdoc/paper.docx")
 	if err != nil {
-		fmt.Println(err)
+		log.Println(err)
 	}
 
 	client := wordpb.NewWordSrvService("word.srv", service.Client())
@@ -33,10 +33,10 @@ func TestWordPaper(t *testing.T) {
 	})
 
 	if err != nil {
-		fmt.Println(err)
+		log.Println(err)
 	}
 
-	fmt.Println(resp.Data)
+	log.Println(resp.Data)
 }
 
 func TestWordQuestion(t *testing.T) {
@@ -51,7 +51,7 @@ func TestWordQuestion(t *testing.T) {
 
 	fileBytes, err := ioutil.ReadFile("../_testdoc/question-fill.docx")
 	if err != nil {
-		fmt.Println(err)
+		log.Println(err)
 	}
 
 	client := wordpb.NewWordSrvService("word.srv", service.Client())
@@ -60,8 +60,8 @@ func TestWordQuestion(t *testing.T) {
 	})
 
 	if err != nil {
-		fmt.Println(err)
+		log.Println(err)
 	}
 
-	fmt.Println(resp.Data)
+	log.Println(resp.Data)
 }
