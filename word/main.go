@@ -7,7 +7,7 @@ import (
 	"github.com/micro/go-plugins/registry/etcdv3"
 	"github.com/zhexiao/edu-parser-rpc/config"
 	"github.com/zhexiao/edu-parser-rpc/proto/wordpb"
-	"github.com/zhexiao/edu-parser-rpc/word"
+	"github.com/zhexiao/edu-parser-rpc/word/srv"
 	"github.com/zhexiao/office-parser/utils"
 	"time"
 )
@@ -51,7 +51,7 @@ func main() {
 		micro.Registry(reg),
 	)
 
-	_ = wordpb.RegisterWordSrvHandler(service.Server(), new(word.CT_Word))
+	_ = wordpb.RegisterWordSrvHandler(service.Server(), new(srv.CT_Word))
 
 	if err := service.Run(); err != nil {
 		fmt.Println(err)

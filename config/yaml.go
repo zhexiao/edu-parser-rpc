@@ -25,11 +25,11 @@ type CT_YamlSettings struct {
 	}
 }
 
-func ReadYaml() *CT_YamlSettings {
+func ReadYaml(configFile string) *CT_YamlSettings {
 	//读取配置文件
 	yamlSettings := new(CT_YamlSettings)
 
-	yamlFile, err := ioutil.ReadFile("./config/settings.yaml")
+	yamlFile, err := ioutil.ReadFile(configFile)
 	if err != nil {
 		log.Panicf("配置文件读取失败,err=%s", err)
 	}

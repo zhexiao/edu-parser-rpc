@@ -1,4 +1,4 @@
-package word
+package srv
 
 import (
 	"github.com/zhexiao/office-parser/utils"
