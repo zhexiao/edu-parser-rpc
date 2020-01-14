@@ -1,6 +1,11 @@
 # edu-parser-rpc
 基于GRPC与go-micro的教育资源解析RPC服务。
 
+[![Build Status](https://travis-ci.org/zhexiao/edu-parser-rpc.svg?branch=master)](https://travis-ci.org/zhexiao/edu-parser-rpc)
+[![codecov](https://codecov.io/gh/zhexiao/edu-parser-rpc/branch/master/graph/badge.svg)](https://codecov.io/gh/zhexiao/edu-parser-rpc)
+![go](https://img.shields.io/badge/go->%3D1.13-blue)
+
+
 ## 基本需求
 1. golang >= 1.13
 2. protoc >= 3.11.2
