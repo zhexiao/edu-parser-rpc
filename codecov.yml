@@ -1,3 +1,4 @@
 ignore:
   - "main.go"
   - "controllers.go"
+  - "word/service.go"
