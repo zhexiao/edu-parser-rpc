@@ -1,4 +1,4 @@
-package configuration
+package config
 
 import (
 	"github.com/go-yaml/yaml"
@@ -29,7 +29,7 @@ func ReadYaml() *CT_YamlSettings {
 	//读取配置文件
 	yamlSettings := new(CT_YamlSettings)
 
-	yamlFile, err := ioutil.ReadFile("settings.yaml")
+	yamlFile, err := ioutil.ReadFile("./config/settings.yaml")
 	if err != nil {
 		log.Panicf("配置文件读取失败,err=%s", err)
 	}

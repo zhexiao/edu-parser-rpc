@@ -22,7 +22,7 @@ func TestWordPaper(t *testing.T) {
 		micro.Registry(reg),
 	)
 
-	fileBytes, err := ioutil.ReadFile("./paper.docx")
+	fileBytes, err := ioutil.ReadFile("../_testdoc/paper.docx")
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -49,7 +49,7 @@ func TestWordQuestion(t *testing.T) {
 		micro.Registry(reg),
 	)
 
-	fileBytes, err := ioutil.ReadFile("./question-fill.docx")
+	fileBytes, err := ioutil.ReadFile("../_testdoc/question-fill.docx")
 	if err != nil {
 		fmt.Println(err)
 	}
