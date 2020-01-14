@@ -1,4 +1,4 @@
-package excel
+package srv
 
 import (
 	"context"
@@ -7,7 +7,15 @@ import (
 )
 
 func (c *CT_Excel) ParserPaper(ctx context.Context, req *basepb.Request, resp *basepb.Response) error {
-	log.Println("ParserPaper")
+	fileBytes := req.Body
+	jsonData, err := c.paper(fileBytes)
+
+	if err != nil {
+		resp.Data = err.Error()
+	} else {
+		resp.Data = jsonData
+	}
+
 	return nil
 }
 
