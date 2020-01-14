@@ -15,5 +15,5 @@
 # vendor/
 
 .idea
-config/settings.yaml
+word/settings.yaml
 docker-compose.yml

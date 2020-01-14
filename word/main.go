@@ -1,20 +1,20 @@
 package main
 
 import (
-	"fmt"
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/registry"
 	"github.com/micro/go-plugins/registry/etcdv3"
-	"github.com/zhexiao/edu-parser-rpc/config"
+	"github.com/zhexiao/edu-parser-rpc/base"
 	"github.com/zhexiao/edu-parser-rpc/proto/wordpb"
 	"github.com/zhexiao/edu-parser-rpc/word/srv"
 	"github.com/zhexiao/office-parser/utils"
+	"log"
 	"time"
 )
 
 func init() {
 	//读取配置文件
-	yamlSettings := config.ReadYaml()
+	yamlSettings := base.ReadYaml("./settings.yaml")
 
 	//初始化七牛的配置
 	utils.OfficeParserQiniuCfg = &utils.Qiniu{
@@ -54,6 +54,6 @@ func main() {
 	_ = wordpb.RegisterWordSrvHandler(service.Server(), new(srv.CT_Word))
 
 	if err := service.Run(); err != nil {
-		fmt.Println(err)
+		log.Println(err)
 	}
 }
